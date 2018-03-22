@@ -7,13 +7,14 @@ class CoordService
   base_uri 'http://api.openweathermap.org/data/2.5/weather?q='
 
   def get_response
-    JSON.parse(self.class.get("London,uk&appid=12fd562a95d4d19d40cb9a77a1a5cfa7").body)
+    JSON.parse(self.class.get("London,uk&appid=12fd562a95d4d19d40cb9a77a1a5cfa7").body)['coord']
   end
 
   def get_latitude
-    # @openweather_api_london['coord']['lat']
-    response = get_response['coord']['lat']
+    get_response['lat']
+  end
 
-    p response
+  def get_longitude
+    get_response['lon']
   end
 end
