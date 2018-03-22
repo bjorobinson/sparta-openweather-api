@@ -37,4 +37,27 @@ describe Openweather_API do
       expect(@test_call.get_description).to be_instance_of String
     end
   end
+
+  context 'Main services' do
+    before(:all) do
+      @test_call = Openweather_API.new.main_service
+    end
+
+    it "should return temp as a float" do
+      expect(@test_call.get_temp).to be_instance_of Float
+    end
+    it "should return temp_min as a float" do
+      expect(@test_call.get_temp_min).to be_instance_of Float
+    end
+    it "should return temp_max as a float" do
+      expect(@test_call.get_temp_max).to be_instance_of Float
+    end
+    it "should contain temp > temp_min" do
+      expect(@test_call.get_temp).to be > @test_call.get_temp_min
+    end
+    it "should contain temp < temp_max" do
+      expect(@test_call.get_temp).to be < @test_call.get_temp_max
+    end
+
+  end
 end
