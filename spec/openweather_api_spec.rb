@@ -25,8 +25,8 @@ describe Openweather_API do
       @test_call = Openweather_API.new.weather_service
     end
     # This test is predicated on the idea that id doesnt change?
-    it "should verify by returning an id of 804" do
-      expect(@test_call.get_id).to eq 804
+    it "should verify by returning an id of 803" do
+      expect(@test_call.get_id).to eq 803
     end
 
     it "should have a main that summarises the weather with a String" do

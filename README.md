@@ -9,7 +9,7 @@ To install: copy the following line into the desired destination directory
 
 `git clone git@github.com:bjorobinson/sparta-openweather-api.git`
 
-Within the root directory, `sparta-openweather-api`, ensure you have the correct dependencies by running `bundle`
+Within the root directory, `sparta-openweather-api`.
 
 Finally, still in the root directory, run the tests using `rspec`
 
@@ -22,7 +22,7 @@ The tests were divided up into 3 different sets to test different parts of the d
   * should return latitude as a float
   * should verify/validate it's London by checking its longitude and latitude vs set coordinates
 * Weather Services
-  * should verify by returning an id of 804
+  * should verify by returning an id of 803
   * should have a main that summarises the weather with a String
   * should have a description of the weather with a String
 * Main services
